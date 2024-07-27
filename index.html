@@ -1,141 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="portfolio.css" />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <title>Chethan_portfolio</title>
-</head>
-<body>
-
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#project">Project</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact Me</a>   
-    </nav>
-    <div class="main">
-      <div class="side">
-        <h2>Hello There!!</h2>
-        <h1>It's Chethan K S</h1>
-        <p>I'm a Web Developer</p>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="left">CKS</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="leftmain">
+        <div>Hello My Name is <span id="element1"></span></div>
+        <div>I'm a <span id="element2"></span></div>
+        <details>
+          <summary>About Me</summary>
+          <p>
+            An MCA aspirant with good communication and leadership skills, eager
+            to engage as web developer, contributes expertise and awareness of
+            digital technology to innovative projects. Thrilled to apply these
+            skills in a professional setting, continuous improvement and
+            contributing to a company's success are top priorities. Committed to
+            professional growth and excellence in the field, always looking to
+            improve skills and gain more knowledge
+          </p>
+        </details>
       </div>
-      <div class="side">
-        <img src="/photo/pic.png"  >
+      <div class="rightmain">
+        <div class="circle">
+          <img src="pic-removebg-preview.png" />
+        </div>
       </div>
-    </div>
-    <pre>
-        ascsdavcavsac
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </pre>
-    <div id="project" class="project">
-        <header>Project</header>
-        <p>ascsdavcavsac
-            sacfsa
-            ascsdavcavsacsacsv
-            acs
-            <pre>
-                sc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </pre>
-        </p>
-
-
-    </div>
-    <footer id="contact">
-        <p>Contact Details</p>
-        <a href="mailto:kschethan192@gmail.com">&#9993; kschethan192@gmail.com</a>
-
-    </footer>
-</body>
+    </main>
+    <hr />
+
+    <script>
+      var typed = new Typed("#element1", {
+        strings: ["Chethan K S"],
+        typeSpeed: 100,
+        showCursor: true,
+        loop: true,
+        loopCount: 100,
+        fadeOut: true,
+        fadeOutClass: "typed-wait",
+        fadeOutDelay: 2500,
+
+        cursorChar: " ",
+        autoInsertCss: true,
+      });
+
+      var typed = new Typed("#element2", {
+        strings: ["Web Developer", "Software Enginner"],
+        typeSpeed: 70,
+        loop: true,
+        loopCount: Infinity,
+        showCursor: true,
+        cursorChar: " ",
+        autoInsertCss: true,
+      });
+    </script>
+  </body>
 </html>
