@@ -4,13 +4,18 @@
   font-family: Georgia;
   box-sizing: border-box;
 }
+
+
 body {
+   color: #005;;
   background-color: azure;
 }
+
 .navb {
   margin: 5px 5px;
   flex: 1;
 }
+
 header {
   position: sticky;
   height: 100px;
@@ -28,16 +33,25 @@ header {
   top: 0px;
   background-color: #1b2f1f;
 }
+
 .left {
   font-size: 2rem;
+  color: rgb(185, 188, 9);
+}
+
+.left:hover {
+  color: rgb(242, 235, 43);
+  font-size: 2.01rem;
 }
 
 .right ul {
   display: flex;
 }
+
 .right ul li {
   list-style: none;
 }
+
 .right ul li a {
   text-decoration: none;
   color: rgb(185, 188, 9);
@@ -45,6 +59,7 @@ header {
   font-size: 19px;
   font-weight: 450;
 }
+
 .right ul li a:hover {
   color: rgb(242, 235, 43);
   font-size: 1.23rem;
@@ -56,18 +71,22 @@ main {
   margin-bottom: 70px;
   max-width: 1600px;
 }
+
 main .leftmain {
   margin: 20px 40px;
   width: 45%;
 }
+
 main .leftmain > div {
   font-size: 2rem;
   color: #005;
   font-weight: 300;
 }
+
 main .leftmain span {
   color: rgb(16, 187, 187);
 }
+
 main .leftmain .details {
   color: aqua;
 }
@@ -77,10 +96,12 @@ main .leftmain details summary {
   margin: 8px 0;
   cursor: pointer;
 }
+
 main .leftmain details summary::marker {
   color: aqua;
   font-size: 25px;
 }
+
 .leftmain details p {
   font-size: 18px;
 }
@@ -91,6 +112,7 @@ main .leftmain details summary::marker {
   --secondary: #5d6bf8;
   --third: #e27fcb;
 }
+
 .rightmain .circle img {
   width: 300px;
   margin: 0 30%;
@@ -134,7 +156,92 @@ main .rightmain {
     );
   }
 }
+
 hr {
   background-color: rgb(242, 235, 43);
   height: 3px;
 }
+
+.contain {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin: 25px 0;
+}
+
+.pro1 {
+  width: 30%;
+  height: auto;
+  position: relative;
+}
+
+.pro1 img{
+  width: 100%;
+
+}
+
+.hidecon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hidecon p{
+  margin: 16px 0;
+  color: #f4ff1d;
+}
+
+.hidecon h3{
+  font-size: 24px;
+  font-weight: 900;
+  color: rgb(35, 166, 35)
+}
+
+
+.pro1:hover .hidecon{
+opacity: 1;
+}
+
+#title{
+  margin: 0 50%;
+}
+
+#title h2{
+ margin-top: 20px;
+ margin-bottom: 5px;
+ color: #1b2f1f;
+ font-size: 22px;
+}
+
+
+#title h2 .underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 12px;
+  height: 5px;
+  width: 100%; 
+  background-color: #f4ff1d;
+}
+
+#title h2 .underline{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.sidehead h2{
+  text-decoration: underline;
+}
+
