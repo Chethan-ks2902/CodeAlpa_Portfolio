@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <title>Chethan_portfolio</title>
   </head>
@@ -15,7 +16,7 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#project">Project</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li><a href="resume.pdf">Resume</a></li>
             <li><a href="#contact">Contact Me</a></li>
           </ul>
         </div>
@@ -44,9 +45,8 @@
         </div>
       </div>
     </main>
-    <hr />
+    <div id="project"></div>
     <div id="title">
-      <div id="project"></div>
       <h2><span class="underline">PROJECT</span></h2>
     </div>
     <div class="contain">
@@ -79,12 +79,77 @@
         </div>
       </div>
     </div>
-    <hr />
     <div id="title">
       <h2><span class="underline">SKILLS</span></h2>
     </div>
-    <div class="sidehead"><h2>PROGRAMMING LANGUAGE</h2></div>
-    
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <div class="content">
+            <h2>Techinical Languague</h2>
+            <div class="image">
+              <img src="photo/c++.png" />
+              <img src="photo/c.png" />
+              <img src="photo/java.jpg" />
+              <img src="photo/js.png" />
+              <img src="photo/python.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <h2>Web Development</h2>
+            <div class="image">
+              <img src="photo/html.png" />
+              <img src="photo/css.png" />
+              <img src="photo/php.png" />
+              <img src="photo/reactjs.png" />
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <h2>DataBase</h2>
+            <div class="image">
+              <img src="photo/mysql.png" />
+              <img src="photo/xampp.jpeg" />
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="content">
+            <h2>Tools</h2>
+            <div class="image">
+              <img src="photo/vscode.jpg" />
+              <img src="photo/github.jpeg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <footer>
+      <div class="message" id="contact">
+        <h2>Connect with me</h2>
+        <p>
+          Hi there!,I'm available on almost all social media ,I will contact you
+          within 24 Hours
+        </p>
+        <div class="social">
+          <a href="https://www.instagram.com/chethu_kulal._/"><i class="fa-brands fa-instagram icon-hover-bounce"></i></a>
+        <a href="https://www.linkedin.com/in/chethan-k-s-915b322bb/"><i class="fa-brands fa-linkedin icon-hover-bounce"></i></a>
+        <a href="https://github.com/Chethan-ks2902"><i class="fa-brands fa-github icon-hover-bounce"></i></a>
+        <a href="mailto:kschethan192@gmail.com"><i class="fa-regular fa-envelope icon-hover-bounce"></i></a>
+        <a href=""><i class="fa-brands fa-whatsapp icon-hover-bounce"></i></a>
+        </div>
+      </div>
+      
+    </footer>
+    <div class="copyright">
+      <i class="fa-regular fa-copyright"><span> 2024. Chethan K S. All Rights Reserved</span></i>
+    </div>
 
     <script>
       var typed = new Typed("#element1", {
@@ -110,6 +175,23 @@
         cursorChar: " ",
         autoInsertCss: true,
       });
+
+      let currentSlide = 0;
+
+      function changeSlide(direction) {
+        const slides = document.querySelectorAll(".slide");
+        const slider = document.querySelector(".slider");
+
+        currentSlide += direction;
+
+        if (currentSlide >= slides.length) {
+          currentSlide = 0;
+        } else if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+        }
+
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
     </script>
   </body>
 </html>
