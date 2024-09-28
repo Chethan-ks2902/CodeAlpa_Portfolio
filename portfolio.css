@@ -4,6 +4,9 @@
     font-family: Georgia;
     box-sizing: border-box;
   }
+ html {
+    scroll-behavior: smooth;
+  }
 
   body {
     color: #fff9d0;
